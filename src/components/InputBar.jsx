@@ -22,7 +22,7 @@ export default function InputBar() {
         }
     }
   return (
-    <div>
+    <div className="input-bar-container">
       <div>
         <input type="text" placeholder="Send a message..." value={message} 
         onChange={(e) => setMessage(e.target.value)}
