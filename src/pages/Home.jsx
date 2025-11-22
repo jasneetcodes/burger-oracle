@@ -13,7 +13,7 @@ export default function Home() {
         <div>
             <ChatWindow />
         </div>
-        <div>
+        <div className="input-bar-wrapper">
             <InputBar />
         </div>
     </div>

@@ -7,6 +7,15 @@
 
 /* INPUT BAR */
 
+.input-bar-wrapper{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background: white;
+  z-index: 10;
+}
+
 .input-bar-container{
   padding: 16px;
   border-top: 1px solid #e5e5e5;
