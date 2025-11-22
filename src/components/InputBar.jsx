@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function InputBar() {
+export default function InputBar({onSendMessage}) {
   const [message, setMessage] = useState("");
   const [isSending, setIsSending] = useState(false);
 
@@ -8,7 +8,7 @@ export default function InputBar() {
     const trimmedMessage = message.trim();
 
     setIsSending(true);
-    // function to send Trimmedmessage
+    // function to send Trimmedmessage onSendMessage(trimmedMessage);
     setIsSending(false);
     setMessage("");
   }

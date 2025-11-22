@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  box-sizing: border-box;
 }
 
 /* INPUT BAR */
@@ -56,11 +57,20 @@
 }
 
 .message{
+  text-align: left;
   max-width: 60%;
   padding: 10px 14px;
   border-radius: 16px;
   line-height: 1.4;
   font-size: 15px;
   color: #111;
-  
+}
+
+/* CHAT WINDOW */
+
+.chat-window{
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  padding: 16px;
+  background: #ffffff;
 }
