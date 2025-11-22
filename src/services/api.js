@@ -1,7 +1,7 @@
 
 const BASE_URL = "http://localhost:5000/api"; // Backend server URL
 
-export async function sendMesageToAPI(message) {
+export default async function sendMessageToAPI(message) {
 
     const response = await fetch(`${BASE_URL}/api/chat`, {
         method: "POST",
