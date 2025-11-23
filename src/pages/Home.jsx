@@ -1,8 +1,22 @@
+import { useState } from "react";
 import InputBar from "../components/InputBar";
 import ChatWindow from "../components/ChatWindow";
+import useChatAPI from "../hooks/useChatAPI";
 export default function Home() {
 
-const messages = [
+  const [messages, setMessages] = useState([]);
+  const {isLoading, sendMessage} = useChatAPI();
+
+
+  async function handleSendMessage(userInput){
+    setMessages(prev => [...prev, {role: "user", content: userInput }]);
+
+    const chatResponse = await sendMessage(userInput)
+
+    setMessages(prev => [...prev, {role: "chat", content: chatResponse}])
+  }
+
+const mockMessages = [
   { role: "user", content: "Hey Oracle, I'm craving a burger." },
   { role: "chat", content: "Certainly! What kind of burger are you in the mood for today?" },
 
@@ -24,10 +38,10 @@ const messages = [
         <p>This is the main landing page of the application.</p>
         </div>
         <div>
-            <ChatWindow messages={messages} />
+            <ChatWindow messages={mockMessages} isLoading={isLoading} />
         </div>
         <div className="input-bar-wrapper">
-            <InputBar />
+            <InputBar onSendMessage={handleSendMessage} />
         </div>
     </div>
   );

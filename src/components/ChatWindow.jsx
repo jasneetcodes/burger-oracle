@@ -1,15 +1,13 @@
 import { useRef, useEffect } from "react"
 import MessageBubble from "./MessageBubble"
 
-export default function ChatWindow({messages}){
+export default function ChatWindow({messages, isLoading}){
 
     const bottomViewRef = useRef(null);
 
     useEffect(() => {
         bottomViewRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [messages]);
-
-    console.log(messages[3]);
 
     return(
         <div className="chat-window">
