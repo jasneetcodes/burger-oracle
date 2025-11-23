@@ -28,8 +28,7 @@ const mockMessages = [
   { role: "user", content: "Nice. Anything close to Kensington?" },
   { role: "chat", content: "Yes! Regrub Kensington is right in the area and well-known for their spicy creations and unique sauces." },
 
-  { role: "user", content: "Perfect, thanks!" },
-  { role: "chat", content: "You're welcome! If you want dessert recommendations or sides, just ask." }
+  { role: "user", content: "Thanks, any other spot near Kensington?" },
 ]; 
     return (
     <div>
