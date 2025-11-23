@@ -11,9 +11,11 @@ export default function useChatAPI(){
             setIsLoading(true);
             const data = await sendMessageToAPI(message);
             return data;
+        } catch(e){
+            throw new Error("Error in sending message", e)
         } finally {
-            setIsLoading(false);
-        }
+           setIsLoading(false);
+        } 
     }
 
     return {isLoading, sendMessage};
